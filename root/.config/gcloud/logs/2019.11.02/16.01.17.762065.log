@@ -1,0 +1,32 @@
+2019-11-02 16:01:18,579 DEBUG    root            Loaded Command Group: [u'gcloud', u'beta', u'compute']
+2019-11-02 16:01:19,064 DEBUG    root            Loaded Command Group: [u'gcloud', u'beta', u'compute', u'ssh']
+2019-11-02 16:01:19,070 DEBUG    root            Running [gcloud.beta.compute.ssh] with arguments: [--zone: "us-easy1-b", [USER@]INSTANCE: "slave"]
+2019-11-02 16:01:19,490 WARNING  root            The public SSH key file for gcloud does not exist.
+2019-11-02 16:01:19,491 WARNING  root            The private SSH key file for gcloud does not exist.
+2019-11-02 16:01:19,491 WARNING  root            You do not have an SSH key for gcloud.
+2019-11-02 16:01:19,491 WARNING  root            SSH keygen will be executed to generate a key.
+2019-11-02 16:01:33,874 DEBUG    root            Running command [/bin/ssh-keygen -t rsa -f /root/.ssh/google_compute_engine].
+2019-11-02 16:01:33,874 DEBUG    root            Executing command: [u'/bin/ssh-keygen', u'-t', u'rsa', u'-f', u'/root/.ssh/google_compute_engine']
+2019-11-02 16:01:36,890 DEBUG    root            (gcloud.beta.compute.ssh) Could not fetch resource:
+ - Invalid value for field 'zone': 'us-easy1-b'. Unknown zone.
+Traceback (most recent call last):
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 984, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 784, in Run
+    resources = command_instance.Run(args)
+  File "/usr/lib64/google-cloud-sdk/lib/surface/compute/ssh.py", line 162, in Run
+    instance = ssh_helper.GetInstance(client, instance_ref)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/command_lib/compute/ssh_utils.py", line 493, in GetInstance
+    return client.MakeRequests([request])[0]
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/client_adapter.py", line 97, in MakeRequests
+    errors, error_message='Could not fetch resource:')
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/utils.py", line 119, in RaiseToolException
+    RaiseException(problems, calliope_exceptions.ToolException, error_message)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/utils.py", line 131, in RaiseException
+    errors))
+ToolException: Could not fetch resource:
+ - Invalid value for field 'zone': 'us-easy1-b'. Unknown zone.
+
+2019-11-02 16:01:36,956 ERROR    root            (gcloud.beta.compute.ssh) Could not fetch resource:
+ - Invalid value for field 'zone': 'us-easy1-b'. Unknown zone.
+

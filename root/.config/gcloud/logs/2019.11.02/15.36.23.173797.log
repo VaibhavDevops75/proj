@@ -1,0 +1,30 @@
+2019-11-02 15:36:23,175 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth']
+2019-11-02 15:36:23,177 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth', u'login']
+2019-11-02 15:36:23,180 DEBUG    root            Running [gcloud.auth.login] with arguments: []
+2019-11-02 15:36:25,529 INFO     ___FILE_ONLY___ Go to the following link in your browser:
+
+    https://accounts.google.com/o/oauth2/auth?code_challenge=JTg7i3h9XF-Gms0d_0bN5q01OSxG0c7jriOvNqn51VU&prompt=select_account&code_challenge_method=S256&access_type=offline&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=code&client_id=32555940559.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fappengine.admin+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcompute+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Faccounts.reauth
+
+
+
+2019-11-02 15:36:28,584 INFO     oauth2client.client Failed to retrieve access token: {
+  "error": "invalid_request",
+  "error_description": "Missing required parameter: code"
+}
+2019-11-02 15:36:28,584 ERROR    root            There was a problem with web authentication.
+2019-11-02 15:36:28,584 DEBUG    root            (gcloud.auth.login) invalid_requestMissing required parameter: code
+Traceback (most recent call last):
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 984, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 784, in Run
+    resources = command_instance.Run(args)
+  File "/usr/lib64/google-cloud-sdk/lib/surface/auth/login.py", line 146, in Run
+    creds = auth_util.DoInstalledAppBrowserFlow(launch_browser, scopes)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/api_lib/auth/util.py", line 95, in DoInstalledAppBrowserFlow
+    client_secret=client_secret)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 700, in AcquireFromWebFlow
+    return RunWebFlow(webflow, launch_browser=launch_browser)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 723, in RunWebFlow
+    raise FlowError(e)
+FlowError: invalid_requestMissing required parameter: code
+2019-11-02 15:36:28,585 ERROR    root            (gcloud.auth.login) invalid_requestMissing required parameter: code

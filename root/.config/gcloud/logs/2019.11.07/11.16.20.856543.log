@@ -1,0 +1,27 @@
+2019-11-07 11:16:20,895 DEBUG    root            Loaded Command Group: [u'gcloud', u'beta', u'compute']
+2019-11-07 11:16:20,934 DEBUG    root            Loaded Command Group: [u'gcloud', u'beta', u'compute', u'ssh']
+2019-11-07 11:16:20,939 DEBUG    root            Running [gcloud.beta.compute.ssh] with arguments: [--zone: "us-east1-b", [USER@]INSTANCE: "slave"]
+2019-11-07 11:16:20,965 INFO     oauth2client.client Refreshing access_token
+2019-11-07 11:16:21,460 DEBUG    root            (gcloud.beta.compute.ssh) Could not fetch resource:
+ - The resource 'projects/dotted-element-253916/zones/us-east1-b/instances/slave' was not found
+Traceback (most recent call last):
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 984, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 798, in Run
+    resources = command_instance.Run(args)
+  File "/usr/lib64/google-cloud-sdk/lib/surface/compute/ssh.py", line 162, in Run
+    instance = ssh_helper.GetInstance(client, instance_ref)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/command_lib/compute/ssh_utils.py", line 493, in GetInstance
+    return client.MakeRequests([request])[0]
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/client_adapter.py", line 97, in MakeRequests
+    errors, error_message='Could not fetch resource:')
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/utils.py", line 119, in RaiseToolException
+    RaiseException(problems, calliope_exceptions.ToolException, error_message)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/utils.py", line 131, in RaiseException
+    errors))
+ToolException: Could not fetch resource:
+ - The resource 'projects/dotted-element-253916/zones/us-east1-b/instances/slave' was not found
+
+2019-11-07 11:16:21,462 ERROR    root            (gcloud.beta.compute.ssh) Could not fetch resource:
+ - The resource 'projects/dotted-element-253916/zones/us-east1-b/instances/slave' was not found
+

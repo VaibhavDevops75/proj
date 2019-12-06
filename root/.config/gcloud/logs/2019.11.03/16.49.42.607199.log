@@ -1,0 +1,6 @@
+2019-11-03 16:49:42,633 DEBUG    root            Loaded Command Group: [u'gcloud', u'beta', u'compute']
+2019-11-03 16:49:42,658 DEBUG    root            Loaded Command Group: [u'gcloud', u'beta', u'compute', u'ssh']
+2019-11-03 16:49:42,661 ERROR    root            (gcloud.beta.compute.ssh) unrecognized arguments: us-east1-b 
+
+To search the help text of gcloud commands, run:
+  gcloud help -- SEARCH_TERMS

@@ -1,0 +1,14 @@
+2019-11-02 15:58:13,526 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth']
+2019-11-02 15:58:13,528 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth', u'login']
+2019-11-02 15:58:13,531 DEBUG    root            Running [gcloud.auth.login] with arguments: []
+2019-11-02 15:58:17,617 INFO     ___FILE_ONLY___ Go to the following link in your browser:
+
+    https://accounts.google.com/o/oauth2/auth?code_challenge=K9PgCQ80EvlLTE8K_r5k_PZ4OzvjMUEsQIF1_6XwD_U&prompt=select_account&code_challenge_method=S256&access_type=offline&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=code&client_id=32555940559.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fappengine.admin+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcompute+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Faccounts.reauth
+
+
+
+2019-11-02 15:58:37,298 INFO     ___FILE_ONLY___ 
+
+Command killed by keyboard interrupt
+
+
